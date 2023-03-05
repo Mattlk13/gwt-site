@@ -1,5 +1,7 @@
 The GWT Release Notes
 =====================
+* [2.10.0](#Release_Notes_2_10_0) June 9, 2022
+* [2.9.0](#Release_Notes_2_9_0) May 13, 2020
 * [2.8.2](#Release_Notes_2_8_2) Oct 19, 2017
 * [2.8.1](#Release_Notes_2_8_1) Apr 24, 2017
 * [2.8.0](#Release_Notes_2_8_0) Oct 20, 2016
@@ -62,6 +64,110 @@ The GWT Release Notes
 * * *
 
 <a id="Release_Notes_Current"></a>
+## <a id="Release_Notes_2_10_0"></a> Release Notes for 2.10.0
+
+### Highlights
+- Updated to HtmlUnit 2.55.0 and Jetty 9.4.44. With this newer HtmlUnit
+build comes support for Promise in unit tests, and the browser strings that
+can be specified when running tests are "FF", "Chrome", "IE" (for IE11), 
+"Edge", and "Safari".
+
+- Tested support for running on Java 17, dropped remaining support for
+running on Java 7.
+
+- Maven groupId is formally changed to `org.gwtproject`, projects should take
+care to make sure they are using either the old `com.google.gwt:gwt` BOM or the
+new `org.gwtproject:gwt` BOM to sure that Maven or Gradle correctly handle
+this change. This will be the last published version using the `com.google.gwt`
+groupId.
+
+- Dropped support for IE 8, 9, and 10.
+
+
+### Bug fixes
+- Correct Long.hashCode semantics
+- Support CLASSPATH environment variable when creating child processes, fixing
+  a bug where Windows could fail with a long list of arguments.
+- Use Function.name instead of displayName to support visible method names in 
+  Chrome 93+.
+- Allow stack traces to be available in Chrome when loading scripts from a remote
+  origin.
+
+### JRE Emulation
+- Added OutputStreamWriter emulation.
+- Support StringReader mark() and reset() methods.
+- Added StrictMath emulation.
+- Added BufferedWriter emulation.
+- Added incomplete PrintStream emulation.
+- Add Charset.defaultCharset() emulation.
+- Improve BigInteger emulated performance.
+- System.nanoTime() emulation with performance.now().
+- Added Optional.isEmpty emulation.
+- JRE Emulation improvements/simplifications to facilitate J2CL's WASM support.
+Note that these do not always offer specific improvements to GWT itself, but
+helps to keep the codebases consistent.
+
+### Miscellaneous
+- Add support to compile GWT itself in Java 9+.
+- Improve compiled code size for applications that never use streams, by
+  avoiding referencing streams from Throwable.
+
+For more detail, see the [commit log](https://github.com/gwtproject/gwt/compare/2.9.0...2.10.0).
+
+## <a id="Release_Notes_2_9_0"></a> Release Notes for 2.9.0
+
+### Highlights
+- Able to compile projects with jsinterop-base 1.0.0, elemental2 1.0.0, and
+jsinterop-annotations 2.0.0. With the exception of @JsAsync and @JsEnum, this
+brings GWT2 to be compatible across these tools with J2CL.
+
+- Added support for Java language levels 9, 10, and 11.
+
+- Officially, support is dropped for running the GWT compiler or server-side
+tooling on Java 7. The GWT distribution is still compiled to run on Java 7
+for this release, but no guarantees are made about whether or not this will 
+work. Future versions will compile bytecode for Java 8+. The release was 
+tested and found to work cross platform when run with Java 8, 11, and 14.
+
+
+### Deprecations
+- Elemental has been officially deprecated - it is still included in this
+release, but may not appear in future releases. Instead, we encourage the use
+of the Elemental2 libraries, which are compatible with both GWT2 and J2CL.
+- Removed NoSuchMethodException emulation.
+
+### Bug fixes
+- Fixes Arrays.binarySearch semantics for float[] and double[]
+- Adds Support multi-line messages in errors/exceptions
+- Adds shutdown hook in DiskCache to clean up temp files
+- Cache Gecko version to lower CPU usage on FireFox
+- Do not assume that "this" is always non null.
+- Updates globals for Firefox version 60.0.2, Chrome 66.0.3359.45
+- Fixes String.regionMatches.
+- Native JsMethods allowed to coexist with implementations with the same name.
+- Make sure lambdas box, unbox and insert erasure casts when necessary.
+- Negative zero treated properly in Double/Float.compare()
+
+### Miscellaneous
+- Updates CLDR to version 34.
+- Arrays now implement Cloneable
+- Link backing errors together with a cause attribute, start tracking
+suppressed errors in addition to the cause in underlying error object.
+- Add AtomicReference to gwt/emul.
+- Propagate script nonces via ScriptInjector
+- Add partial emulation for ExecutorService and ScheduledExecutorService
+- Emulate java.util.concurrent.Flow
+- Emulate javax.annotation{,.processing}.Generated
+- Make sure "goog.global" is $wnd if not defined.
+- Add `when-linker-added` element definition
+- Add Reader and StringReader emulation.
+- Remove GWT version check.
+- Do not show "unusable-by-js" warning for synthetic methods.
+- Update unmodifiableList to throw on Java8 methods.
+- Disable DataflowOptimizer by default and emit a warning when used
+
+For more detail, see the [commit log](https://gwt.googlesource.com/gwt/+log/2.8.2..release/2.9.0).
+
 ## <a id="Release_Notes_2_8_2"></a> Release Notes for 2.8.2
 
 ### Highlights
@@ -98,7 +204,7 @@ for Turkish
 - Fix AIOOBE when compiling method references involving varargs.
 - Apply HtmlUnit workaround ensuring that window.onerror is called correctly
 
-### Miscellanous
+### Miscellaneous
 - Migrated lang/jre emulation JSNI to JsInterop to share with J2CL
 - Added ErrorProne to gwt builds
 - Improved compliance with CSP
@@ -150,7 +256,7 @@ prefered supertype of any JS type, including primitives.
 - Properly preserve names in overrides of native methods.
 - Make Array.sort(float[]/double[]) JDK compliant
 
-### Miscellanous
+### Miscellaneous
 - Small optimization in String.subString
 - Specialize Objects.equals for strings.
 - Improve primitive cast optimizations.
@@ -181,7 +287,7 @@ prefered supertype of any JS type, including primitives.
 - Fix incorrect property copying for native JsType subclasses.
 - Fix toString dispatch for subtypes of native JsTypes.
 
-### Miscellanous
+### Miscellaneous
 - Improve JsInterop error messages on native type fieds.
 - Update globals for Chrome 54.0.2840.16.
 
@@ -267,7 +373,7 @@ prefered supertype of any JS type, including primitives.
 ## GSS
 - Add CSS3 and GSS support in InterfaceGenerator
 
-### Miscellanous
+### Miscellaneous
 - Fixing up the Maven samples to work with GWT 2.8
 - Fixed spelling error when starting CodeServer
 - Update globals for Chrome 52.0.2743.24.

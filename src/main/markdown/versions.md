@@ -3,6 +3,48 @@ Versions
 
 GWT is licensed under the [Apache 2.0 open source license](terms.html) (since version 1.3).
 
+### Version 2.10.0
+
+Build 2.10.0 - June 9, 2022 - [Release notes](release-notes.html#Release_Notes_2_10_0)
+
+  <table class="downloads" style="width:500px">
+    <tbody>
+      <tr>
+        <th>Platform</th>
+        <th>Package</th>
+        <th>Size</th>
+        <th>SHA1 Sum</th>
+      </tr>
+      <tr>
+        <td>Windows, Mac OS X, and Linux</td>
+        <td>[gwt-2.10.0.zip](https://github.com/gwtproject/gwt/releases/download/2.10.0/gwt-2.10.0.zip)</td>
+        <td>88 MB</td>
+        <td>5c43e648d3b85f518bcf1703532c1e2e4292214e</td>
+      </tr>
+    </tbody>
+  </table>
+
+### Version 2.9.0
+
+Build 2.9.0 - May 13, 2020 - [Release notes](release-notes.html#Release_Notes_2_9_0)
+
+  <table class="downloads" style="width:500px">
+    <tbody>
+      <tr>
+        <th>Platform</th>
+        <th>Package</th>
+        <th>Size</th>
+        <th>SHA1 Sum</th>
+      </tr>
+      <tr>
+        <td>Windows, Mac OS X, and Linux</td>
+        <td>[gwt-2.9.0.zip](https://storage.googleapis.com/gwt-releases/gwt-2.9.0.zip)</td>
+        <td>94 MB</td>
+        <td>b9f6a041c400522dd68cc869707d07757eb6bbe4</td>
+      </tr>
+    </tbody>
+  </table>
+
 ### Version 2.8.2
 
 Build 2.8.2 - Oct 19, 2017 - [Release notes](release-notes.html#Release_Notes_2_8_2)
@@ -17,7 +59,7 @@ Build 2.8.2 - Oct 19, 2017 - [Release notes](release-notes.html#Release_Notes_2_
       </tr>
       <tr>
         <td>Windows, Mac OS X, and Linux</td>
-        <td>[gwt-2.8.2.zip](https://goo.gl/pZZPXS)</td>
+        <td>[gwt-2.8.2.zip](https://storage.googleapis.com/gwt-releases/gwt-2.8.2.zip)</td>
         <td>91 MB</td>
         <td>c7209b9547da3cbb8c8795d46f92bac18610dac3</td>
       </tr>
@@ -38,7 +80,7 @@ Build 2.8.1 - Apr 24, 2017 - [Release notes](release-notes.html#Release_Notes_2_
       </tr>
       <tr>
         <td>Windows, Mac OS X, and Linux</td>
-        <td>[gwt-2.8.1.zip](https://goo.gl/TysXZl)</td>
+        <td>[gwt-2.8.1.zip](https://storage.googleapis.com/gwt-releases/gwt-2.8.1.zip)</td>
         <td>92 MB</td>
         <td>c1d192851c6fa219d8dd0a63a147f14a70107371</td>
       </tr>
@@ -59,7 +101,7 @@ Build 2.8.0 - Oct 20, 2016 - [Release notes](release-notes.html#Release_Notes_2_
       </tr>
       <tr>
         <td>Windows, Mac OS X, and Linux</td>
-        <td>[gwt-2.8.0.zip](https://goo.gl/QWOlx0)</td>
+        <td>[gwt-2.8.0.zip](https://storage.googleapis.com/gwt-releases/gwt-2.8.0.zip)</td>
         <td>89.8 MB</td>
         <td>5b9faa0251d5c7acfe806ee2611ab265aaa742cd</td>
       </tr>
@@ -80,7 +122,7 @@ Build 2.7.0 - Nov 20, 2014 - [Release notes](release-notes.html#Release_Notes_2_
       </tr>
       <tr>
         <td>Windows, Mac OS X, and Linux</td>
-        <td>[gwt-2.7.0.zip](http://goo.gl/t7FQSn)</td>
+        <td>[gwt-2.7.0.zip](https://storage.googleapis.com/gwt-releases/gwt-2.7.0.zip)</td>
         <td>104 MB</td>
         <td>2688f2ed80a36ba0e6170a4ef656581d811f330f</td>
       </tr>
@@ -100,7 +142,7 @@ Build 2.6.1 - May 09, 2014 - [Release notes](release-notes.html#Release_Notes_2_
     </tr>
     <tr>
       <td>Windows, Mac OS X, and Linux</td>
-      <td>[gwt-2.6.1.zip](http://goo.gl/BLc6R8)</td>
+      <td>[gwt-2.6.1.zip](https://storage.googleapis.com/gwt-releases/gwt-2.6.1.zip)</td>
       <td>104 MB</td>
       <td>8ebc808e9ca6ef7e8f6460c8c0840423c192b3c5</td>
     </tr>
